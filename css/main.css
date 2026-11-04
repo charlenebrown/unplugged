@@ -186,6 +186,27 @@ textarea {
   /* Style adjustments for high resolution devices */
 }
 
+//Seven Unplugged color properties
+:root {
+  color-forest: #214D3A;
+  color-navy: #142B49;
+  color-gold: #F2D447;
+  color-lavender: #A99AD6;
+  color-silver: #C4CBD3;
+  color-onyx: #17191D;
+  color-cream: #FAF8F2;
+}
+
+
+
+
+
+
+
+
+
+
+
 /* ==========================================================================
    Print styles.
    Inlined to avoid the additional HTTP request:
