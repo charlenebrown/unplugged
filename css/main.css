@@ -87,6 +87,13 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+   *, *::before, *::after {
+    box-sizing: border-box;
+   }
+    
+
+
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -186,22 +193,424 @@ textarea {
   /* Style adjustments for high resolution devices */
 }
 
-//Seven Unplugged color properties
+/* Seven Unplugged color properties */
 :root {
-  color-forest: #214D3A;
-  color-navy: #142B49;
-  color-gold: #F2D447;
-  color-lavender: #A99AD6;
-  color-silver: #C4CBD3;
-  color-onyx: #17191D;
-  color-cream: #FAF8F2;
+  --color-forest: #214D3A;
+  --color-navy: #142B49;
+  --color-gold: #F2D447;
+  --color-lavender: #A99AD6;
+  --color-silver: #C4CBD3;
+  --color-onyx: #17191D;
+  --color-cream: #FAF8F2;
+}
+
+body {
+  background-color: var(--color-cream);
+  color: var(--color-onyx);
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+
+h1 {
+font-size: 2.5rem;
+line-height: 1.15;
+}
+
+h2 {
+font-size: 2rem;
+line-height: 1.2;
+}
+
+h3 {
+font-size: 1.375rem;
+line-height: 1.3;
+}
+
+h1, h2, h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: var(--color-forest);
+  text-underline-offset: 0.2em;
+}
+
+a:focus-visible {
+  outline: 3px solid var(--color-navy);
+  outline-offset: 3px;
+}
+
+.site-header a:focus-visible, .hero-area a:focus-visible, .site-footer a:focus-visible {
+  outline-color: var(--color-gold);
+}
+
+.content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.site-header {
+  background-color: var(--color-forest);
+  padding: 1.25rem 0;
+}
+
+.site-header .content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
 }
 
 
 
+.site-header .content-wrapper > a {
+  display: block;
+  width: 220px;
+  max-width: 100%;
+  flex-shrink: 1;
+}
+  
+
+
+.site-header img {
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+}
+
+.site-header nav {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+.site-header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.site-header nav li {
+    margin: 0;
+}
+
+
+.site-header a {
+  color: var(--color-cream);
+  font-weight: 700;
+}
+
+.hero-area {
+  background-color: var(--color-navy);
+  color: var(--color-cream);
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.hero-area h1 {
+  font-size: 3rem;
+  max-width: 850px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-area p {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-area a {
+  color: var(--color-gold);
+}
+
+
+.retreat-pathways {
+  padding: 5rem 0;
+}
+
+.retreat-pathways .content-wrapper {
+  display: grid;
+  gap: 2rem;
+}
+
+
+.retreat-pathways h2 {
+  grid-column: 1 / -1;
+}
+
+
+.retreat-pathways > .content-wrapper > p {
+  grid-column: 1 / -1;
+}
+
+
+.teams {
+  background-color: var(--color-forest);
+  color: var(--color-cream);
+  padding: 2.5rem;
+  border-radius: 1rem;
+}
+
+.leaders {
+  background-color: var(--color-silver);
+  color: var(--color-onyx);
+  padding: 2.5rem;
+  border-radius: 1rem;
+}
+
+
+.teams a {
+  color: var(--color-gold);
+}
+
+.leaders a {
+  color: var(--color-navy);
+}
+
+.leadership-pillars {
+  padding: 5rem 0;
+  background-color: var(--color-cream);
+}
+
+
+.pillars-container {
+  display: grid;
+  gap: 1.5rem;
+}
+
+
+.pillars-container > div {
+  padding: 2rem;
+  border: 1px solid var(--color-silver);
+  border-radius: 1rem;
+}
+
+
+.global-destinations {
+  padding: 5rem 0;
+  background-color:var(--color-navy);
+  color: var(--color-cream);
+}
+.destinations-container	{
+  display: grid;
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.destinations-container > div	{
+  background-color: var(--color-cream);
+  color: var(--color-onyx);
+  padding: 2rem;
+  border-radius: 1rem;
+}
+.nourishment-restoration	{
+  padding: 5rem 0;
+}
+
+.nourishment-restoration h2	{
+  grid-column: 1 / -1;
+}
+
+.nourishment-restoration .content-wrapper	{
+  display: grid;
+  gap: 1.5rem;
+}
+.nourishment-restoration > .content-wrapper > p	{
+  grid-column: 1 / -1;
+}
+.nourishment-restoration .content-wrapper > div	{
+  padding: 2rem;
+  background-color: white;
+  border-radius: 1rem;
+}
+.mindful-design	{
+  padding: 5rem 0;
+  background-color: var(--color-forest);
+  color: var(--color-cream);
+}
+.mindful-design h2	{
+  grid-column: 1 / -1;
+}
+.mindful-design > .content-wrapper > p	{
+  grid-column: 1 / -1;
+}
+.mindful-design > .content-wrapper	{
+  display: grid;
+  gap: 2rem;
+
+}
+
+
+.mindful-step {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--color-silver);
+}
 
 
 
+.unplugged-experience	{
+  padding: 5rem 0;
+}
+.unplugged-experience h2	{
+  grid-column: 1 / -1;
+}
+.unplugged-experience > .content-wrapper	{
+  display: grid;
+  gap: 2rem;
+}
+
+.unplugged-experience > .content-wrapper > p	{
+  grid-column: 1 / -1;
+}
+
+.experience-step {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--color-silver);
+}
+
+
+.leadership-perspective	{
+  padding: 5rem 0;
+  background-color: var(--color-silver);
+}
+.leadership-perspective blockquote	{
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin: 0;
+}
+.stay-connected	{
+  padding: 5rem 0;
+  text-align: center;
+}
+.stay-connected input	{
+  padding: 0.875rem;
+  max-width: 100%;
+}
+.stay-connected button	{
+  padding: 0.875rem 1.5rem;
+  border-radius: 0.5rem;
+}
+.site-footer	{
+  background-color: var(--color-onyx);
+  color: var(--color-cream);
+  padding: 4rem 0 2rem;
+}
+.site-footer a	{
+  color: var(--color-cream);
+}
+
+.footer-navigation	{
+  display: grid;
+  gap: 2rem;
+}
+.footer-navigation ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-navigation li	{
+  margin-bottom: 0.75rem;
+}
+.footer-bottom	{
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-silver);
+}
+
+
+.mindful-step	{
+   border-radius:	0.75rem;
+   padding:	2rem;
+   background-color:	var(--color-navy);
+  }
+
+
+
+.experience-step	{
+  border-radius:	0.75rem;
+  padding:	2rem;
+  background-color:	white;
+}
+
+.signup-container	{
+  max-width:	650px;
+  margin:	0 auto;
+}
+
+.stay-connected input	{
+  border:	1px solid var(--color-navy);
+  border-radius:	0.5rem;
+}
+
+
+.stay-connected button:disabled	{
+  cursor:	not-allowed;
+  opacity:	0.65;
+}
+
+
+
+@media (min-width: 48rem) {
+.site-header .content-wrapper	{
+flex-direction: row;
+justify-content: space-between;
+}
+
+.retreat-pathways .content-wrapper	{
+  grid-template-columns: repeat(2, 1fr);}
+
+.pillars-container	{
+  grid-template-columns: repeat(3, 1fr);}
+
+.destinations-container	{
+  grid-template-columns: repeat(2, 1fr);}
+
+.nourishment-restoration > .content-wrapper	{
+  grid-template-columns:	repeat(3, minmax(0, 1fr));
+}
+.mindful-design > .content-wrapper	{
+  grid-template-columns:	repeat(3, minmax(0, 1fr));}
+.unplugged-experience > .content-wrapper	{
+  grid-template-columns:	repeat(2, minmax(0, 1fr));}
+
+.footer-navigation	{
+  grid-template-columns: repeat(3, 1fr);}
+
+
+}
+
+
+
+@media (min-width: 64rem) {
+  .hero-area h1	{
+    font-size: 4.5rem;}
+  
+  .destinations-container	{
+    grid-template-columns: repeat(4, 1fr);}
+
+}
 
 
 
